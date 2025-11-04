@@ -1,29 +1,7 @@
-# if else - compare two characters
-# Read two characters, output '1' if same, '0' if different
 A<I
 B<I
-# Subtract to check if equal
-C<A
-D<B
-E<1
-# Check if A==B by subtracting and checking if result is 0
-# Since we can't do arithmetic directly, we'll use a different approach
-# We'll compare bit by bit or use lookup
-# Actually, simpler: output '1' (ASCII 49) if A==B, else '0' (ASCII 48)
-# A==B means A-B == 0, but we can't subtract
-# Let's use memory as a flag array
-# Set mem[A] = 1, check mem[B]
 [A]<1
 F<[B]
-# If F==1, they're equal, output '1' (49), else output '0' (48)
-# We need conditional execution... but mov only has mov
-# Use arithmetic: output = 48 + F
-G<48
-H<G
-# If F==1, add 1 to get 49
-# We can't add directly, so we need to use memory/lookup
-# Let me use a lookup table approach
-# Store 48 at position 0, store 49 at position 1
 [0]<48
 [1]<49
 O<[F]
